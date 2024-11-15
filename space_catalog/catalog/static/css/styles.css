@@ -1,0 +1,122 @@
+/* General body styling */
+body {
+     /* Dark blue background */
+    background-color:rgb(3, 3, 44);
+    color: #fff; /* White text */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #212121; /* Dark gray for navbar */
+}
+
+.navbar-brand, .nav-link {
+    color: #ffeb3b; /* Yellow text */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fdd835; /* Brighter yellow on hover */
+}
+
+/* Button styling */
+.btn-warning {
+    background-color: #ffeb3b; /* Yellow button */
+    border-color: #ffeb3b;
+}
+
+.btn-warning:hover {
+    background-color: #fdd835; /* Brighter yellow on hover */
+    border-color: #fdd835;
+}
+
+/* Container styling for the main content */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Form and input field styling */
+.form-control {
+    background-color: #424242; /* Dark background for form fields */
+    border: 1px solid #616161; /* Light gray border */
+    color: #fff; /* White text */
+}
+
+.form-control:focus {
+    border-color: #ffeb3b; /* Yellow border on focus */
+    background-color: #333333; /* Darker background on focus */
+}
+
+/* Heading and text styling */
+h1, h2, h3 {
+    color: #ffeb3b; /* Yellow headings */
+}
+
+p {
+    color: #ddd; /* Light gray text for paragraphs */
+}
+
+/* Card styles for space objects */
+.card {
+    background-color: #424242; /* Dark background for cards */
+    border: none; /* Remove card border */
+    color: #fff; /* White text */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Styling for the space object cards */
+.card-title {
+    font-size: 1.5em;
+    color: #ffeb3b; /* Yellow card titles */
+}
+
+.card:hover {
+    background-color: #616161; /* Lighter background on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.card:hover .card-title {
+    color: #fdd835; /* Brighter yellow on card hover */
+}
+
+/* Spacing between elements */
+.mt-5 {
+    margin-top: 3rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-warning {
+    color: #ffeb3b !important;
+}
+
+/* Custom styling for login and signup pages */
+.login-signup-container {
+    background-color: #212121;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.login-signup-container .form-group {
+    margin-bottom: 1rem;
+}
+
+/* Custom hover effect for the space objects links */
+.card-body a:hover {
+    background-color: #ffeb3b;
+    color: #02073b;
+    padding: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,26 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+{% block content %}
+  <div class="container">
+      <h1 class="text-center text-warning">{{ object.name }}</h1>
+      <div class="row">
+          <div class="col-md-6">
+              <p><strong>Category:</strong> {{ object.get_category_display }}</p>
+              <p><strong>Description:</strong> {{ object.description }}</p>
+              <p><strong>Distance:</strong> {{ object.distance }} light-years</p>
+              <p><strong>Size:</strong> {{ object.size }} km</p>
+          </div>
+      </div>
+      <div class="text-center mt-4">
+          <a href="{% url 'spaceobject_list' %}" class="btn btn-secondary">Back to Catalog</a>
+          <a href="{% url 'notes_list' object.id %}" class="btn btn-primary">Notes</a>
+      </div>
+  </div>
+{% endblock %}

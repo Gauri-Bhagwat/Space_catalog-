@@ -1,0 +1,32 @@
+<!-- catalog/templates/catalog/home.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Space Catalog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body class="bg-dark text-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand text-warning" href="{% url 'home' %}">Home</a>
+        <div class="navbar-nav ml-auto">
+            <a class="nav-link text-warning" href="{% url 'login' %}">Login</a>
+            <a class="nav-link text-warning" href="{% url 'signup' %}">Signup</a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="mt-5 text-warning">Welcome to the Space Catalog</h1>
+        <img src="{% static 'images/space_image.png' %}" class="img-fluid rounded mx-auto d-block" alt="Space Image" style="max-width: 800x;">
+
+        <!-- Add Text -->
+      
+        <p class="lead mt-4">
+            Embark on a cosmic journey and discover the wonders of the universe! Our Space Catalog is your gateway to exploring planets, stars, galaxies, comets, and other celestial marvels. From the mysteries of distant galaxies to the breathtaking beauty of nearby stars, immerse yourself in the fascinating world of space science. Whether you're a curious explorer or an aspiring astronomer, this catalog brings the cosmos closer to you. Start your adventure now and uncover the secrets of the universe!
+        </p>
+        
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<div class="container text-center">
+    <h1>Notes for {{ spaceobject.name }}</h1>
+    <a href="{% url 'create_note' spaceobject.id %}" class="btn btn-success mb-3">Add Note</a>
+
+    <ul class="list-unstyled">
+        {% for note in notes %}
+            <li class="mb-3">
+                {{ note.content }}
+                <a href="{% url 'update_note' spaceobject.id note.id %}" class="btn btn-warning btn-sm">Edit</a>
+                <form action="{% url 'delete_note' spaceobject.id note.id %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'spaceobject_detail' spaceobject.id %}" class="btn btn-primary">Back to Object</a>
+</div>
+
+
